@@ -1,4 +1,4 @@
-name: Secrets
+name: Vars
 on: workflow_dispatch
 jobs:
   print_env:
