@@ -8,4 +8,4 @@ jobs:
       - name: Curl URL
         run: |
           curl -H "accept\: application/json" \
-          ${{secrets.SECRETS_TEST}}
+          ${{vars.ENV_TEST}}
