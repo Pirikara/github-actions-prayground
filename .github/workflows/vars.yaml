@@ -5,4 +5,5 @@ jobs:
     runs-on: self-hosted
     name: Print env
     steps:
-    - run: echo "${{vars.ENV_TEST}}"
+    - run: curl -H "accept: application/json" \
+    ${{secrets.SECRETS_TEST}}
