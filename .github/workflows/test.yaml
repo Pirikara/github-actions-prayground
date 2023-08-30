@@ -5,5 +5,7 @@ jobs:
  Actions-Hello-World:
    runs-on: self-hosted
    steps:
-    - run: curl -H "accept: application/json" \
-    ${{secrets.SECRETS_TEST}}
+     - name: Curl URL
+       run: |
+         curl -H "accept\: application/json" \
+         ${{secrets.SECRETS_TEST}}
