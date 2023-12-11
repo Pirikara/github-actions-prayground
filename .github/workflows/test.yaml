@@ -14,3 +14,4 @@ jobs:
     - name: ENV test
       run: |
         echo $SECRETS_TEST
+        echo ${SECRETS_TEST}
