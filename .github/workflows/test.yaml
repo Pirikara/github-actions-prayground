@@ -1,11 +1,18 @@
-name: GitHub Actions Demo
+name: ENV test
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'scanner/**'
+  workflow_dispatch:
 
-on: workflow_dispatch
 jobs:
- Actions-Hello-World:
-   runs-on: self-hosted
-   steps:
-     - name: Curl URL
-       run: |
-         curl -H "accept\: application/json" \
-         ${{secrets.SECRETS_TEST}}
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      SECRETS_TEST: ${{ secrets.SECRETS_TEST}}
+    steps:
+    - name: ENV test
+      run: |
+        echo $SECRETS_TEST
