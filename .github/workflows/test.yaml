@@ -9,7 +9,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     env:
-      SECRETS_TEST: ${{ secrets.SECRETS_TEST}}
+      SECRETS_TEST: ${{ secrets.SECRETS_TEST }}
     steps:
     - name: ENV test
       run: |
